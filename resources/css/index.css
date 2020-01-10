@@ -1,0 +1,71 @@
+* {
+    font-family: Helvetica, Arial, sans-serif;
+  }
+   /* Container holding the image and the text */
+
+   body     {
+    
+    border-style: solid;
+    border-width: medium;
+
+     }
+
+   .title {
+  position: right;
+  
+}
+
+#blue {
+  position: center;
+  width: 100%;
+}
+
+
+.images {
+
+  position: center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 60%;
+}
+
+
+/* Bottom right text */
+.title-text {
+  position: top;
+  bottom: 200px;
+
+  font-family: Helvetica;
+    font-weight:bold;
+    font-size: 30px;
+    text-align: center;
+    color: #0000e6;
+} 
+
+
+  h1 {
+    color: rgb(82, 81, 78);
+    font-family: Helvetica;
+    font-weight:bold;
+    font-size: 25px;
+    
+  }
+  
+  
+  p {
+    
+    text-align: center;
+    font-family: Helvetica;
+    font-size: 18px;
+    color: #0000e6;
+    margin-bottom: 60px;
+  }
+  
+  
+  a {
+    text-decoration: none;
+  }
+.normal {font-family: Helvetica;}
+  .bold { font-weight: bold; }
+.blue { color:blue }
