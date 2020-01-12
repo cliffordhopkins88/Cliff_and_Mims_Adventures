@@ -1,14 +1,38 @@
 * {
     font-family: Helvetica, Arial, sans-serif;
+    
   }
    /* Container holding the image and the text */
 
-   body     {
+body  {
     
     border-style: solid;
     border-width: medium;
 
-     }
+ }
+
+header {
+      width: 100%;
+      position: fixed;
+      z-index: 1;
+      height: 60px;
+      background-color: black;
+      border-bottom: 1px solid black;
+      align-items: center;
+      opacity: 0.5;
+      font-size: 22px;
+  }
+
+  header img {
+    height: 60px;
+    width: auto;
+  }
+  
+  .flex {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
 
    .title {
   position: right;
