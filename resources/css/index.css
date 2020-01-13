@@ -21,14 +21,16 @@ header {
       align-items: center;
       opacity: 0.5;
       font-size: 22px;
+      padding-right: 200px;
   }
 
   header img {
     height: 60px;
     width: auto;
   }
+
   
-  .flex {
+  .flexHeader {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -36,6 +38,26 @@ header {
 
    .title {
   position: right;
+  
+}
+
+.main {
+  width: 100%;
+  height: 100%;
+  border:  solid red;
+
+}
+.images1 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding-top: 90px;
+  
+
+}
+#pball {
+  position: center;
+  height: 300px;
   
 }
 
@@ -48,7 +70,7 @@ header {
 .images {
 
   position: center;
-  display: block;
+  display: flex;
   margin-left: auto;
   margin-right: auto;
   width: 60%;
