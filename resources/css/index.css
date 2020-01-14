@@ -3,10 +3,6 @@
     
   }
   
-
-   
-
-
 header {
       width: 100%;
       position: fixed;
@@ -71,6 +67,7 @@ header {
 .box2 { background-color: orange; }
 .box3 { background-color: purple; }
 .box4 { background-color: grey; }*/
+
 .images2 {
   display: flex;
   grid-template-rows: 1fr 1fr;
@@ -84,7 +81,7 @@ header {
 }
 #pball2 {
   position: center;
-  height: 300px;
+  height: 320px;
   
 }
 .images1 {
@@ -92,13 +89,13 @@ header {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-around;
-  padding-top: 90px;
+  padding-top: 10px;
   
 
 }
 #pball {
   position: center;
-  height: 300px;
+  height: 400px;
   
 }
 
