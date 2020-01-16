@@ -1,6 +1,5 @@
 * {
     font-family: Helvetica, Arial, sans-serif;
-    
   }
   
 header {
@@ -77,8 +76,8 @@ header {
   justify-content: space-around;
   padding-top: 90px;
   
-
 }
+
 #pball2 {
   position: center;
   height: 320px;
@@ -111,10 +110,15 @@ header {
   display: flex;
   margin-left: auto;
   margin-right: auto;
-  width: 60%;
+  width: 30%;
+  transition: transform .2s;
 }
 
-
+.images:hover {
+  -ms-transform: scale(1.8); /* IE 9 */
+  -webkit-transform: scale(1.8); /* Safari 3-8 */
+  transform: scale(1.8); 
+}
 /* Bottom right text */
 .title-text {
   position: top;
