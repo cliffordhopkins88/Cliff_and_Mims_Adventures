@@ -130,7 +130,7 @@ header {
 }
 
 .grid2x2 {
-  min-height: 60%;
+  min-height: 30%;
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
