@@ -1,7 +1,4 @@
-let colours = ["#f5f5f0", "#ebebe0", "#e0e0d1", "#d6d6c2", "#ccccb3", 
-"#c2c2a3", "#b8b894", "#adad85", "#a3a375", "#999966", "#8a8a5c", "#7a7a52", "#7a7a52",
-"#8a8a5c","#999966", "#a3a375", "#adad85", "#b8b894", "#c2c2a3", "#ccccb3", "#d6d6c2",  
-"#e0e0d1", "#ebebe0", "#f5f5f0"];
+let colours = ["#ffffff", "#f2f2f2", "#e6e6e6"," #d9d9d9", "#cccccc", "#bfbfbf","#b3b3b3", "#a6a6a6","#999999","#8c8c8c","#808080","#737373","#666666","#595959","#4d4d4d","#404040", "#333333","#262626","#0d0d0d","#000000"];
 
 function changeColour(i){
     document.body.style.background = colours[i];
@@ -13,6 +10,25 @@ function changeColour(i){
         changeColour(i);
     },500);
 }
+}
+//Get the button:
+mybutton = document.getElementById("myBtn");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0; // For Safari
+  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
 }
 
 changeColour(0);
