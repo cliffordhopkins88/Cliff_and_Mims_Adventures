@@ -24,7 +24,17 @@ header {
     width: auto;
   }
 
- 
+ .subtext{
+   color: black;
+   text-align: center;
+    font-family: Helvetica;
+    font-size: 22px;
+    font-style: italic;
+    
+    padding-top: 50px;
+   /* margin: 50px 0 0px;*/
+
+ }
   
   .flexHeader {
     display: flex;
@@ -127,9 +137,9 @@ font-family: komoda;
   margin:0 auto;
   max-width:980px;
   width:96%;
-  background:#fff2c4;
+  background:#F0F8FF;
   
-   border: solid 2px #000;
+  /* border: solid 2px #000;*/
      border-radius:6px;
      padding-top: 80px;
 
