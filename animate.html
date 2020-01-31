@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<style>
+#container {
+    display: flex;
+    justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background:whitesmoke;
+}
+.boxStyle {
+  width: 98%;
+  height: 50px;
+  position: absolute;
+  align-items: center;
+  background-color: black;
+    opacity: 0.8;
+    z-index: 1;
+    font-size: 22px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-basis: auto;
+/* width: 98.5%;
+    z-index: 1;
+    height: 90px;
+    background-color: black;
+    border-bottom: 1px solid black;
+    align-items: center;
+    opacity: 0.8;
+    font-size: 22px*/
+}
+h1 {
+    display: block;
+    color: rgb(242, 240, 234);
+    font-family: Komoda;
+    font-weight:bold;
+    font-size: 35px;
+    letter-spacing: 5px;
+    margin-top: 0px;
+    margin-bottom: 1px;
+  }
+  h2{
+    display: block;
+    color: rgb(242, 240, 234);
+    font-family: 'Times New Roman', Times, serif;
+    font-weight:bold;
+    font-size: 25px;
+    letter-spacing: 1px;
+    margin-top: 0px;
+    margin-bottom: 30px;
+  }
+  h3{
+    
+    font-size: 5px;
+  }
+</style>
+<body>
+
+<!--<p><button onclick="myMove()">Click Me</button></p> -->
+
+<div id ="container">
+  <div id ="animate" class="boxStyle">
+    <h1>Cliff and Mim</h1><h2>'</h2><h1>S Adventures</h1>
+  </div>
+  <div id ="animate1" class="boxStyle">
+    <a href="index.html">
+        <h1>ENTER</h1>
+    </a>  
+  </div>
+</div>
+
+<script>
+function myMove() {
+  var elem = document.getElementById("animate");   
+  var pos = 0;
+  var id = setInterval(frame, 5);
+  function frame() {
+    if (pos == 350) {
+      clearInterval(id);
+    } else {
+      pos++; 
+      elem.style.top = pos + "px"; 
+      //elem.style.left = pos + "px"; 
+      console.log(elem.style.top);
+     // console.log(elem.style.left);
+     
+    }
+  }
+}
+myMove();
+
+function myMove1() {
+  var elem = document.getElementById("animate1");   
+  var pos = 500;
+  var id = setInterval(frame, 5);
+  function frame() {
+    if (pos == 100) {
+      clearInterval(id);
+    } else {
+      pos--; 
+      elem.style.top = pos + "px"; 
+      //elem.style.left = pos + "px"; 
+      console.log(elem.style.bottom);
+     // console.log(elem.style.left);
+    }
+  }
+}
+myMove1();
+</script>
+
+</body>
+</html>
