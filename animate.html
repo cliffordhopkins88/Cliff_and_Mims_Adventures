@@ -4,18 +4,19 @@
 #container {
     display: flex;
     justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 100%;
-  position: relative;
-  background:whitesmoke;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background:whitesmoke;
 }
+
 .boxStyle {
-  width: 98%;
-  height: 50px;
-  position: absolute;
-  align-items: center;
-  background-color: black;
+     width: 98%;
+     height: 50px;
+     position: fixed;
+     align-items: center;
+    background-color: black;
     opacity: 0.8;
     z-index: 1;
     font-size: 22px;
@@ -23,6 +24,7 @@
     justify-content: center;
     flex-wrap: wrap;
     flex-basis: auto;
+
 /* width: 98.5%;
     z-index: 1;
     height: 90px;
@@ -56,12 +58,22 @@ h1 {
     
     font-size: 5px;
   }
+
+  img {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+    opacity: 0.5;
+  }
 </style>
 <body>
 
 <!--<p><button onclick="myMove()">Click Me</button></p> -->
 
 <div id ="container">
+    <img id="img" src="/Users/cliffhopkins/Documents/GitHub/Cliff_and_Mims_Adventures/images/hotelCali.jpg"/>
+    
   <div id ="animate" class="boxStyle">
     <h1>Cliff and Mim</h1><h2>'</h2><h1>S Adventures</h1>
   </div>
@@ -73,6 +85,35 @@ h1 {
 </div>
 
 <script>
+
+function displayNextImage() {
+    x = (x === images.length - 1) ? 0 : x + 1;
+    document.getElementById("img").src = images[x];
+   // console.log(x);
+}
+
+function displayPreviousImage() {
+    x = (x <= 0) ? images.length - 1 : x - 1;
+    document.getElementById("img").src = images[x];
+   // console.log(images(i));
+}
+
+function startTimer() {
+    setInterval(displayNextImage, 800);
+}
+
+var images = [
+    
+    "/Users/cliffhopkins/Documents/GitHub/Cliff_and_Mims_Adventures/images/lookingPink.jpg",
+    "/Users/cliffhopkins/Documents/GitHub/Cliff_and_Mims_Adventures/images/bluies2019.jpg",
+    "/Users/cliffhopkins/Documents/GitHub/Cliff_and_Mims_Adventures/images/BondiView.jpg",
+    "/Users/cliffhopkins/Documents/GitHub/Cliff_and_Mims_Adventures/images/onMimsBalcony.jpg",
+    "/Users/cliffhopkins/Documents/GitHub/Cliff_and_Mims_Adventures/images/christmasDay.jpg",
+    "/Users/cliffhopkins/Documents/GitHub/Cliff_and_Mims_Adventures/images/christmasDay2.jpg"
+], x=-1;
+
+startTimer();
+
 function myMove() {
   var elem = document.getElementById("animate");   
   var pos = 0;
