@@ -18,6 +18,7 @@ img {
     width: auto;
     padding-top: 20px;
     opacity: 0.5;
+    min-width: 450px;
     
   }
 .boxStyle {
@@ -101,8 +102,6 @@ function startTimer() {
 var images = [
     
     "/Users/cliffhopkins/Documents/GitHub/Cliff_and_Mims_Adventures/images/lookingPink.jpg",
-    
-   
     "/Users/cliffhopkins/Documents/GitHub/Cliff_and_Mims_Adventures/images/onMimsBalcony.jpg",
     "/Users/cliffhopkins/Documents/GitHub/Cliff_and_Mims_Adventures/images/christmasDay2.jpg"
 ], x=-1;
@@ -114,7 +113,7 @@ function myMove() {
   var pos = 0;
   var id = setInterval(frame, 5);
   function frame() {
-    if (pos == 350) {
+    if (pos == 530) {
       clearInterval(id);
     } else {
       pos++; 
@@ -133,14 +132,14 @@ function myMove1() {
   var pos = 500;
   var id = setInterval(frame, 5);
   function frame() {
-    if (pos == 100) {
+    if (pos == 40) {
       clearInterval(id);
     } else {
       pos--; 
       elem.style.top = pos + "px"; 
       //elem.style.left = pos + "px"; 
       console.log(elem.style.bottom);
-     // console.log(elem.style.left);
+     
     }
   }
 }
