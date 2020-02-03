@@ -1,226 +1,151 @@
+<!DOCTYPE html>
 <html>
-<head>
+<style>
+#container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background:whitesmoke;
     
-        <link href="./resources/css/index.css" type="text/css" rel="stylesheet">
+}
+img {
+    display: flex;
+    justify-content: center;
+    height: 95%;
+    width: auto;
+    padding-top: 20px;
+    opacity: 0.5;
+    
+  }
+.boxStyle {
+     width: 98%;
+     height: 50px;
+     position: fixed;
+     align-items: center;
+    background-color: black;
+    opacity: 0.8;
+    z-index: 1;
+    font-size: 22px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-basis: auto;
 
-  <title>Cliff n Mim's Adventures</title>
-</head>
+
+}
+h1 {
+    display: block;
+    color: rgb(242, 240, 234);
+    font-family: Komoda;
+    font-weight:bold;
+    font-size: 35px;
+    letter-spacing: 5px;
+    margin-top: 0px;
+    margin-bottom: 1px;
+  }
+  h2{
+    display: block;
+    color: rgb(242, 240, 234);
+    font-family: 'Times New Roman', Times, serif;
+    font-weight:bold;
+    font-size: 25px;
+    letter-spacing: 1px;
+    margin-top: 0px;
+    margin-bottom: 30px;
+  }
+  h3{
+    
+    font-size: 5px;
+  }
+
+  
+</style>
 <body>
-  <script src="main.js"></script>
 
+<!--<p><button onclick="myMove()">Click Me</button></p> -->
 
-
-<header class="flexHeader">
- 
-  <h1>Cliff and Mim</h1><h2>'</h2><h1>S Adventures</h1>
-  
-</header>
-
-
-
-<div id="test" class="main">
-
-
-
-  
-  <div class="space">
-    <!--<a  target="_blank" title="follow me on facebook" href="https://www.facebook.com/cliff.hopkins.73"><img id="fbBtn" alt="follow me on facebook" src="https://c866088.ssl.cf3.rackcdn.com/assets/facebook30x30.png" border=0></a>
-    <a  target="_blank" title="follow me on insta" href="https://www.facebook.com/cliff.hopkins.73"><img id="igBtn" alt="follow me on facebook" src="https://c866088.ssl.cf3.rackcdn.com/assets/facebook30x30.png" border=0></a>
-    -->
+<div id ="container">
+    <img id="img" src="/Users/cliffhopkins/Documents/GitHub/Cliff_and_Mims_Adventures/images/fancyDress.jpg"/>
+    
+  <div id ="animate" class="boxStyle">
+    <h1>Cliff and Mim</h1><h2>'</h2><h1>S Adventures</h1>
   </div>
-
-  <div class="subtext">
-   EL CHORRO
+  <div id ="animate1" class="boxStyle">
+    <a href="main.html">
+        <h1>ENTER</h1>
+    </a>  
   </div>
+</div>
 
-  <div class="grid2x2">
+<script>
+
+function displayNextImage() {
+    x = (x === images.length - 1) ? 0 : x + 1;
+    document.getElementById("img").src = images[x];
+   // console.log(x);
+}
+
+function displayPreviousImage() {
+    x = (x <= 0) ? images.length - 1 : x - 1;
+    document.getElementById("img").src = images[x];
+   // console.log(images(i));
+}
+
+function startTimer() {
+    setInterval(displayNextImage, 800);
+}
+
+var images = [
+    
+    "/Users/cliffhopkins/Documents/GitHub/Cliff_and_Mims_Adventures/images/lookingPink.jpg",
+    
    
-    <div class="box box2">
-      <img id="pball2" src="./images/elChorro1.jpg">
-      <div>
-        </div>
-      </div>
-    <div class="box box3">
-      <div>
-        <img id="pball2" src="./images/elChorro2.jpg">
-      </div>
-    </div>
-    <div class="box box4">
-      <div>
-        <img id="pball2" src="./images/elChorro3.jpg">
-      </div>
-    </div>
-  </div>
+    "/Users/cliffhopkins/Documents/GitHub/Cliff_and_Mims_Adventures/images/onMimsBalcony.jpg",
+    "/Users/cliffhopkins/Documents/GitHub/Cliff_and_Mims_Adventures/images/christmasDay2.jpg"
+], x=-1;
 
- 
+startTimer();
 
+function myMove() {
+  var elem = document.getElementById("animate");   
+  var pos = 0;
+  var id = setInterval(frame, 5);
+  function frame() {
+    if (pos == 350) {
+      clearInterval(id);
+    } else {
+      pos++; 
+      elem.style.top = pos + "px"; 
+      //elem.style.left = pos + "px"; 
+      console.log(elem.style.top);
+     // console.log(elem.style.left);
+     
+    }
+  }
+}
+myMove();
 
-
-  <div class="subtext">
-    MADRID
-  </div>
-
-  <div class="grid2x2">
-    <div class="box box1">
-      <div>
-        <img id="pball2" src="./images/madrid1.jpg">
-        
-      </div>
-    </div>
-    <div class="box box2">
-      <img id="pball2" src="./images/madrid2.jpg">
-      <div>
-        </div>
-      </div>
-    <div class="box box3">
-      <div>
-        <img id="pball2" src="./images/madrid3.jpg">
-      </div>
-    </div>
-    <div class="box box4">
-      <div>
-        <img id="pball2" src="./images/madrid4.jpg">
-      </div>
-    </div>
-  </div>
-
-  <div class="subtext">
-    FOUR OLIVES WITH FATHER
-  </div>
-  <div class="images2">
-    <img id="panorama" src="./images/fourOlives.jpg" alt="tiles">
-  </div>
-
-  <div class="grid2x2">
-    <div class="box box1">
-      <div>
-        <img id="pball2" src="./images/Connies.jpg">
-        
-      </div>
-    </div>
-    <div class="box box2">
-      <img id="pball2" src="./images/dadWorking.jpg">
-      <div>
-        </div>
-      </div>
-    <div class="box box3">
-      <div>
-        <img id="pball2" src="./images/doAsYourTold.jpg">
-      </div>
-    </div>
-    <div class="box box4">
-      <div>
-        <img id="pball2" src="./images/bigGuns.jpg">
-      </div>
-    </div>
-  
-  </div>
-  
-
-  <div class="subtext">  
-  PAINTBALLING FOR CHARLIE'S BIRTHDAY
-  </div>
- 
-  <div class="grid2x2">
-    <div class="box box1">
-      <div>
-        <img id="pball2" src="./images/paintball1.jpg">
-      </div>
-    </div>
-    <div class="box box2">
-      <img id="pball2" src="./images/paintball6.jpg">
-      <div>
-        </div>
-      </div>
-    <div class="box box3">
-      <div>
-        <img id="pball2" src="./images/paintball7.jpg">
-      </div>
-    </div>
-    <div class="box box4">
-      <div>
-        <img id="pball2" src="./images/paintball8.jpg">
-      </div>
-    </div>
-    <div class="box box5">
-      <div>
-        <img id="pball2" src="./images/paintball3.jpg">
-      </div>
-    </div>
-    <div class="box box6">
-      <div>
-        <img id="pball2" src="./images/paintball4.jpg">
-      </div>
-    </div>
-    <div class="box box7">
-      <div>
-        <img id="pball2" src="./images/paintball2.jpg">
-      </div>
-    </div>
-  </div>
-
-  <div class="subtext">  
-   SYDNEY
-    </div>
-  <div class="grid2x2">
-    <div class="box box1">
-      <div>
-        <img id="pball2" src="./images/christmasDay2.jpg">
-        
-      </div>
-    </div>
-    <div class="box box2">
-      <img id="pball2" src="./images/christmasDay.jpg">
-      <div>
-        </div>
-      </div>
-    <div class="box box3">
-      <div>
-        <img id="pball2" src="./images/BondiView.jpg">
-      </div>
-    </div>
-    <div class="box box4">
-      <div>
-        <img id="pball2" src="./images/onMimsBalcony.jpg">
-      </div>
-    </div>
-  
-  </div>
-  
-
-  <div class="subtext">  
-   BLUE MOUNTAINS
-     </div>
-   <div class="grid2x2">
-     <div class="box box1">
-       <div>
-         <img id="pball2" src="./images/movingHouse.jpg">
-         
-       </div>
-     </div>
-     <div class="box box2">
-       <img id="pball2" src="./images/parrotInBlackhath.jpg">
-       <div>
-         </div>
-       </div>
-     <div class="box box3">
-       <div>
-         <img id="pball2" src="./images/hotelCali.jpg">
-       </div>
-     </div>
-     <div class="box box4">
-       <div>
-         <img id="pball2" src="./images/bluies2019.jpg">
-       </div>
-      </div>
-       <div class="box box5">
-        <div>
-          <img id="pball2" src="./images/fancyDress.jpg">
-        </div>
-     </div>
-   
-   </div>
-  
+function myMove1() {
+  var elem = document.getElementById("animate1");   
+  var pos = 500;
+  var id = setInterval(frame, 5);
+  function frame() {
+    if (pos == 100) {
+      clearInterval(id);
+    } else {
+      pos--; 
+      elem.style.top = pos + "px"; 
+      //elem.style.left = pos + "px"; 
+      console.log(elem.style.bottom);
+     // console.log(elem.style.left);
+    }
+  }
+}
+myMove1();
+</script>
 
 </body>
 </html>
