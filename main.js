@@ -2,7 +2,7 @@ let colours = ["#ffffff", "#f2f2f2", "#e6e6e6"," #d9d9d9", "#cccccc", "#bfbfbf",
 
 function changeColour(i){
     document.body.style.background = colours[i];
-    console.log(`function 1 ${colours[i]}`);
+    //console.log(`function 1 ${colours[i]}`);
     
     if(i<colours.length){
     setTimeout(function(){
@@ -12,7 +12,7 @@ function changeColour(i){
 }
 }
 //Get the button:
-mybutton = document.getElementById("myBtn");
+mybutton = document.getElementById("topBtn");
 
 // When the user scrolls down 20px from the top of the document, show the button
 window.onscroll = function() {scrollFunction()};
@@ -31,4 +31,64 @@ function topFunction() {
   document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
 }
 
+// When the user clicks on the drop down nav bar it navigates to different places on page.
+function contactNav() {
+
+  var contact = document.getElementById("topBtn");
+  contact.scrollIntoView();
+  
+}
+
+function elChorro1Nav() {
+  var elChorroPt1 =  document.getElementById("elChorroPt1");
+  elChorroPt1.scrollIntoView();
+}
+
+function elChorro2Nav() {
+
+  var elChorroPt2 =  document.getElementById("elChorroPt2");
+  elChorroPt2.scrollIntoView();
+
+}
+
+
+  function madridNav() {
+    var madrid =  document.getElementById("madrid");
+    madrid.scrollIntoView();
+  }
+ 
+ function malagaNav() {
+  var malaga =  document.getElementById("malaga");
+  malaga.scrollIntoView();
+}
+
+
+  var parentsPlace =  document.getElementById("parentsPlace");
+  parentsPlace.scrollIntoView();
+
+  function sydneyNav() {
+  var sydney =  document.getElementById("sydney");
+  sydney.scrollIntoView();
+  }
+
+  function bluiesNav() {
+  var bluies =  document.getElementById("bluies");
+  bluies.scrollIntoView();
+  }
+
+
 changeColour(0);
+
+
+function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+
+   
+    x.className += " responsive";
+    console.log("responsive now");
+  } else {
+    x.className = "topnav";
+    console.log("top nav now");
+  }
+}
