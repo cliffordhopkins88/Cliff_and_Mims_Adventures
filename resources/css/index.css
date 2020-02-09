@@ -3,10 +3,9 @@
   
   }
 
-  
 header {
  
-      width: 98.5%;
+      width: 100%;
       position: fixed;
      /* z-index: 1; */
       height: 90px;
@@ -32,8 +31,25 @@ header {
     font-style: italic;
     padding-top: 100px;
    /* margin: 50px 0 0px;*/
-
  }
+
+ .footer{
+  display: flex;
+  flex-direction: row;
+  position: center;
+  justify-content: center;
+  color:whitesmoke;
+  background-color: black;
+  border: lightslategray;
+  text-align: center;
+   font-family: Helvetica;
+   font-size: 16px;
+   font-style: italic;
+   padding: 10px 10px 10px 10px;
+  ;
+   opacity: 0.7;
+  /* margin: 50px 0 0px;*/
+}
   
   .flexHeader {
     display: flex;
@@ -99,10 +115,10 @@ body {margin:0;font-family:Arial}
 }
 
 .dropdown .dropbtn {
-  font-size: 17px;    
+  font-size: 20px;    
   border: none;
   outline: none;
-  color: white;
+  color: whitesmoke;
   padding: 14px 16px;
   background-color: inherit;
   font-family: inherit;
@@ -112,7 +128,7 @@ body {margin:0;font-family:Arial}
 .dropdown-content {
   display: none;
   position: absolute;
-  background-color: #f9f9f9;
+  background-color: black;
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
@@ -121,7 +137,7 @@ body {margin:0;font-family:Arial}
 
 .dropdown-content a {
   float: none;
-  color: black;
+  color: white;
   padding: 12px 16px;
   text-decoration: none;
   display: block;
@@ -184,18 +200,6 @@ body {margin:0;font-family:Arial}
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
 .images2 {
 
   position: center;
@@ -226,45 +230,44 @@ body {margin:0;font-family:Arial}
 
 #topBtn {
  
-  left: 30px;
+  /*left: 30px;*/
   text-align: end;
   height: 40px;
   align-items: flex-end;
     cursor: pointer;
-    background-color: buttonface;
+    background-color: whitesmoke;
     box-sizing: border-box;
     margin: 0em;
     font: 400 11px system-ui;
     padding: 1px 7px 2px;
     border-width: 1px;
     border-style: solid;
-    
-
+  
 }
 
+#arrowImage {
+  height: 20px;
+}
 #fbBtn {
   /* Hidden by default */
-  position: fixed;
-  top: 8px;
-  right: 25px;
+  position: center;
+ 
   z-index: 99;
   cursor: pointer;
-  padding-right: 10px;
-  padding-top: 10px;
-  height: 25px;
+  
+  height: 40px;
   opacity: 1;
   }
 
   #igBtn {
-    /* Hidden by default */
-    position: fixed;
-    top: 48px;
-    right: 25px;
+    
+    position: center;
+    
     z-index: 99;
     outline: none;
     cursor: pointer;
-    padding: 5px 10px 5px 5px;
-    height: 25px;
+    
+    height: 40px;
     opacity: 1;
     }
 
@@ -290,12 +293,12 @@ body {margin:0;font-family:Arial}
   
   /* border: solid 2px #000;*/
      border-radius:6px;
-     padding-top: 80px;
+     padding-top: 30px;
 
 }
 
 .grid2x2 {
-  min-height: 30%;
+  min-height: 10%;
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
@@ -323,6 +326,36 @@ body {margin:0;font-family:Arial}
 .box3 { background-color: purple; }
 .box4 { background-color: grey; }*/
 
+.grid {
+  min-height: 10%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  position: center;
+  justify-content: center;
+  
+  
+}
+.grid > div {
+  display: flex; 
+  flex-basis: auto;  
+  justify-content: center;
+  flex-direction: column;
+  
+}
+.grid > div > div {
+  display: flex;
+  justify-content: end;
+  flex-direction: row;
+  
+  
+}
+
+.box { margin: 10px; height: 70%;}
+/*.box1 { background-color: red; }
+.box2 { background-color: orange; }
+.box3 { background-color: purple; }
+.box4 { background-color: grey; }*/
 
 
 #imageStyle {
@@ -334,7 +367,6 @@ body {margin:0;font-family:Arial}
   -ms-transform: scale(1.6); /* IE 9 */
   -webkit-transform: scale(1.6); /* Safari 3-8 */
   transform: scale(1.6), ; 
-  
 }
 .images1 {
   display: flex;
@@ -419,14 +451,10 @@ body {margin:0;font-family:Arial}
     font-family: Helvetica;
     font-size: 22px;
     /*color: rgb(242, 240, 234);*/
-    
-    margin: 12px 0 30px;
+    margin: 12px 0 12px;
   }
   
-  footer {
-    background-color: black;
-    
-  }
+
   
   a {
     text-decoration: none;
