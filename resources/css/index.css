@@ -3,66 +3,44 @@
   
   }
 
+body {
+  margin:0;
+  font-family:Arial;
+}
+
+.main {
+  margin:0 auto;
+  width:96%;
+  background:#F0F8FF;
+  border-radius:6px;
+  padding-top: 30px;
+}
+
 header {
- 
-      width: 100%;
-      position: fixed;
-     /* z-index: 1; */
-      height: 90px;
-      background-color: black;
-      border-bottom: 1px solid black;
-      align-items: center;
-      opacity: 0.7;
-      font-size: 22px;
-      
-  }
-
-  header img {
-    height: 60px;
-    width: auto;
-  }
-
-  
- .subtext{
-   color: black;
-   text-align: center;
-    font-family: Helvetica;
-    font-size: 22px;
-    font-style: italic;
-    padding-top: 100px;
-   /* margin: 50px 0 0px;*/
- }
-
- .footer{
-  display: flex;
-  flex-direction: row;
-  position: center;
-  justify-content: center;
-  color:whitesmoke;
+  width: 100%;
+  position: fixed;
+  height: 90px;
   background-color: black;
-  border: lightslategray;
-  text-align: center;
-   font-family: Helvetica;
-   font-size: 16px;
-   font-style: italic;
-   padding: 10px 10px 10px 10px;
-  ;
-   opacity: 0.7;
-  /* margin: 50px 0 0px;*/
-}
-  
-  .flexHeader {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    flex-basis: auto;
-  
-}
+  border-bottom: 1px solid black;
+  align-items: center;
+  opacity: 0.8;
+  font-size: 22px;
+  }
+
+.flexHeader {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-basis: auto;
+  }
+
+
+  /* MEDIA RULE FONT SIZE CHANGES FOR SCREEN SIZE */
 
 @media only screen and (max-width: 500px) {
  
   header h1 {
-    font-size: 26px;
+    font-size: 33px;
   }
   header h2 {
     font-size: 19px;
@@ -80,14 +58,15 @@ header {
 }
 
 
-body {margin:0;font-family:Arial}
+/*  NAV BAR CODE  */
 
 .topnav {
   overflow: hidden;
   background-color: black;
   position: fixed;
   top: 10px;
-  right: 20px;
+  right: 25px;
+  z-index: -1;
 }
 
 .topnav a {
@@ -97,12 +76,15 @@ body {margin:0;font-family:Arial}
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
-  font-size: 17px;
+  font-size: 20px;
+  top: 250px;
+  right: 20px;
 }
 
 .active {
   background-color: black;
-  color: white;
+  color: black;
+  top: 300px
 }
 
 .topnav .icon {
@@ -142,7 +124,6 @@ body {margin:0;font-family:Arial}
   text-decoration: none;
   display: block;
   text-align: left;
-  
 }
 
 .topnav a:hover, .dropdown:hover .dropbtn {
@@ -159,77 +140,63 @@ body {margin:0;font-family:Arial}
   display: block;
 }
 
-@media screen and (max-width: 6000px) {
-  .topnav a:not(:first-child), .dropdown .dropbtn {
-    display: none;
-  }
-  .topnav a.icon {
-    float: right;
-    display: block;
-  }
+.topnav a:not(:first-child), .dropdown .dropbtn {
+  display: none;
+}
+.topnav a.icon {
+  float: right;
+  display: block;
+}
+.topnav.responsive {
+  position: fixed;
+  top: 30px;
 }
 
-@media screen and (max-width: 6000px)
- {
-  .topnav.responsive {
-    position: fixed;
-    top: 30px;
-  }
-
-  .topnav.responsive .icon {
-    position: fixed;
-    right: 20px;
-    top: 10px;
-  }
-  .topnav.responsive a {
-    float: none;
-    display: block;
-    text-align: left;
-  }
-  .topnav.responsive .dropdown {float: none;}
-  .topnav.responsive .dropdown-content {
-    position: fixed;
-    right: 40px;
-    top: 10px;
-  }
-  .topnav.responsive .dropdown .dropbtn {
-    display: block;
-    width: 100%;
-    text-align: left;
-  }
+.topnav.responsive .icon {
+  position: fixed;
+  right: 25px;
+  top: 10px;
 }
-
-
-.images2 {
-
-  position: center;
-  display: flex;
-  margin-left: auto;
-  margin-right: auto;
-  width: 98%;
- 
+.topnav.responsive a {
+  float: none;
+  display: block;
+  text-align: left;
 }
-
-#panorama{
-  position: center;
+.topnav.responsive .dropdown {float: none;}
+.topnav.responsive .dropdown-content {
+  position: fixed;
+  right: 110px;
+  top: 91px;
+}
+.topnav.responsive .dropdown .dropbtn {
+  display: block;
   width: 100%;
-  padding-top: 15px;
-  transition: transform .4s;
-}
-#panorama:hover {
-  -ms-transform: scale(1.5); /* IE 9 */
-  -webkit-transform: scale(1.5); /* Safari 3-8 */
-  transform: scale(1.5), ; 
-  
+  text-align: left;
 }
 
 
-#myBtn:hover {
-  background-color: black; /* Add a dark-grey background on hover */
+ /* FOOTER */ 
+
+ .footer{
+  display: flex;
+  flex-direction: row;
+  position: center;
+  justify-content: center;
+  color:whitesmoke;
+  background-color: black;
+  border: lightslategray;
+  text-align: center;
+  font-family: Helvetica;
+  font-size: 16px;
+  font-style: italic;
+  padding: 10px 10px 10px 10px;
+  opacity: 0.7;
+
 }
+
+ /* FOOTER SOCIAL MEDIA BUTTONS */ 
 
 #topBtn {
- 
   /*left: 30px;*/
   text-align: end;
   height: 40px;
@@ -242,62 +209,44 @@ body {margin:0;font-family:Arial}
     padding: 1px 7px 2px;
     border-width: 1px;
     border-style: solid;
-  
+    opacity: 0.7;
 }
-
+#topBtn:hover {
+  background-color: black; /* Add a dark-grey background on hover */
+  color: whitesmoke;
+}
 #arrowImage {
   height: 20px;
+  top:30px;
 }
-#fbBtn {
+
+#SMBtn {
   /* Hidden by default */
   position: center;
- 
   z-index: 99;
   cursor: pointer;
-  
-  height: 40px;
+  widows: 30px;
+  height: 30px;
   opacity: 1;
   }
-
-  #igBtn {
-    
-    position: center;
-    
-    z-index: 99;
-    outline: none;
-    cursor: pointer;
-    
-    height: 40px;
-    opacity: 1;
-    }
-
-#titleText {
-  display: flex;
-    justify-content: center;
   
   
+
+/* TITLE TEXT FOR PLACES DIVS */
+
+.titleText{
+  color: black;
+  text-align: center;
+  font-family: Helvetica;
+  font-size: 22px;
+  font-style: italic;
+  padding-top: 100px;
+  /* margin: 50px 0 0px;*/
 }
 
-   .title {
-  position: right;
-  
-}
+/* GRIDFOR PLACES DIVS */
 
-
-
-.main {
-  margin:0 auto;
-  max-width:980px;
-  width:96%;
-  background:#F0F8FF;
-  
-  /* border: solid 2px #000;*/
-     border-radius:6px;
-     padding-top: 30px;
-
-}
-
-.grid2x2 {
+.placesGrid {
   min-height: 10%;
   display: flex;
   flex-wrap: wrap;
@@ -306,14 +255,14 @@ body {margin:0;font-family:Arial}
   justify-content: center;
   
 }
-.grid2x2 > div {
+.placesGrid > div {
   display: flex; 
   flex-basis: auto;  
   justify-content: center;
   flex-direction: column;
   
 }
-.grid2x2 > div > div {
+.placesGrid > div > div {
   display: flex;
   justify-content: center;
   flex-direction: row;
@@ -326,37 +275,8 @@ body {margin:0;font-family:Arial}
 .box3 { background-color: purple; }
 .box4 { background-color: grey; }*/
 
-.grid {
-  min-height: 10%;
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  position: center;
-  justify-content: center;
-  
-  
-}
-.grid > div {
-  display: flex; 
-  flex-basis: auto;  
-  justify-content: center;
-  flex-direction: column;
-  
-}
-.grid > div > div {
-  display: flex;
-  justify-content: end;
-  flex-direction: row;
-  
-  
-}
 
-.box { margin: 10px; height: 70%;}
-/*.box1 { background-color: red; }
-.box2 { background-color: orange; }
-.box3 { background-color: purple; }
-.box4 { background-color: grey; }*/
-
+/* IMAGES IN PLACES DIVS */
 
 #imageStyle {
   position: center;
@@ -367,7 +287,98 @@ body {margin:0;font-family:Arial}
   -ms-transform: scale(1.6); /* IE 9 */
   -webkit-transform: scale(1.6); /* Safari 3-8 */
   transform: scale(1.6), ; 
+  z-index: 1;
 }
+
+#panoramaImage{
+  position: center;
+  width: 100%;
+  padding-top: 15px;
+  transition: transform .4s;
+}
+#panoramaImage:hover {
+  -ms-transform: scale(1.5); 
+  -webkit-transform: scale(1.5); 
+  transform: scale(1.5); 
+}
+
+h1 {
+  display: block;
+  color: rgb(242, 240, 234);
+  font-family: Komoda;
+  font-weight:bold;
+  font-size: 35px;
+  letter-spacing: 5px;
+  margin-top: 0px;
+  margin-bottom: 1px;
+  text-decoration: none;
+  }
+
+h2 {
+  display: block;
+  color: rgb(242, 240, 234);
+  font-family: 'Times New Roman', Times, serif;
+  font-weight:bold;
+  font-size: 25px;
+  letter-spacing: 1px;
+  margin-top: 0px;
+  margin-bottom: 30px;
+  }
+  
+p {
+  text-align: center;
+  font-family: Helvetica;
+  font-size: 22px;
+  margin: 12px 0 12px;
+  }
+
+
+.normal {font-family: Helvetica;}
+.bold { font-weight: bold; }
+.blue { color:blue }
+
+
+/*  header img {
+    height: 60px;
+    width: auto;
+  }*/
+
+  /*
+  #igBtn {
+    position: center;
+    z-index: 99;
+    outline: none;
+    cursor: pointer;
+    height: 40px;
+    opacity: 1;
+    }
+
+    
+#titleText {
+  display: flex;
+  justify-content: center;
+}
+
+   .title {
+  position: right;
+}
+*/
+
+/*
+
+.images2 {
+
+  position: center;
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  width: 98%;
+ 
+}
+*/
+
+
+/*
 .images1 {
   display: flex;
   flex-direction: row;
@@ -375,25 +386,29 @@ body {margin:0;font-family:Arial}
   justify-content: space-around;
   padding: 10px 50px 0;
 }
+*/
 
-
+/*
 #pball {
   position: center;
   height: 250px;
   transition: transform .2s;
 }
 #pball:hover {
-  -ms-transform: scale(1.8); /* IE 9 */
-  -webkit-transform: scale(1.8); /* Safari 3-8 */
+  -ms-transform: scale(1.8);  IE 9 
+  -webkit-transform: scale(1.8);  Safari 3-8 
   transform: scale(1.8); 
 }
+
 
 #blue {
   position: center;
   width: 100%;
 }
 
+*/
 
+/*
 .images {
 
   position: center;
@@ -405,11 +420,23 @@ body {margin:0;font-family:Arial}
 }
 
 .images:hover {
-  -ms-transform: scale(1.8); /* IE 9 */
-  -webkit-transform: scale(1.8); /* Safari 3-8 */
+  -ms-transform: scale(1.8); 
+  -webkit-transform: scale(1.8);
   transform: scale(1.8); 
 }
-/* Bottom right text */
+/*
+
+/*  DESCRIPTION TEXT FOR PLACES DIVS 
+.title-text {
+  position: top;
+  bottom: 200px;
+  font-family: Helvetica;
+    font-weight:bold;
+    font-size: 30px;
+    text-align: center;
+    color: #0000e6;
+} 
+/* Bottom right text 
 .title-text {
   position: top;
   bottom: 200px;
@@ -420,45 +447,15 @@ body {margin:0;font-family:Arial}
     color: #0000e6;
 } 
 
-.space{
+
+.space {
   position: absolute;
   height: 40px;
 }
-  h1 {
-    display: block;
-    color: rgb(242, 240, 234);
-    font-family: Komoda;
-    font-weight:bold;
-    font-size: 35px;
-    letter-spacing: 5px;
-    margin-top: 0px;
-    margin-bottom: 1px;
-  }
-  h2 {
-    display: block;
-    color: rgb(242, 240, 234);
-    font-family: 'Times New Roman', Times, serif;
-    font-weight:bold;
-    font-size: 25px;
-    letter-spacing: 1px;
-    margin-top: 0px;
-    margin-bottom: 30px;
-  }
-  
-  p {
-    
-    text-align: center;
-    font-family: Helvetica;
-    font-size: 22px;
-    /*color: rgb(242, 240, 234);*/
-    margin: 12px 0 12px;
-  }
-  
 
-  
-  a {
+a {
     text-decoration: none;
+    color:black;
   }
-.normal {font-family: Helvetica;}
-  .bold { font-weight: bold; }
-.blue { color:blue }
+
+*/
