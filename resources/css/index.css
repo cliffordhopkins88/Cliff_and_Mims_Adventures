@@ -19,7 +19,7 @@ body {
 header {
   width: 100%;
   position: fixed;
-  height: 90px;
+  height: 110px;
   background-color: black;
   border-bottom: 1px solid black;
   align-items: center;
@@ -32,19 +32,26 @@ header {
   justify-content: center;
   flex-wrap: wrap;
   flex-basis: auto;
+ 
   }
 
+.diaries {
+padding: 0px 100px 0px 100px;
+}
 
   /* MEDIA RULE FONT SIZE CHANGES FOR SCREEN SIZE */
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 450px) {
  
   header h1 {
-    font-size: 33px;
+    font-size: 25px;
   }
   header h2 {
     font-size: 19px;
   }
+  .diaries {
+    padding: 0px 80px 0px 80px;
+    }
 }
 
 @media only screen and (min-width: 580px) {
@@ -57,6 +64,12 @@ header {
   }
 }
 
+@media only screen and (min-width: 750px) {
+ 
+  .diaries {
+    padding: 0px 10px 0px 0px;
+    }
+}
 
 /*  NAV BAR CODE  */
 
@@ -64,7 +77,7 @@ header {
   overflow: hidden;
   background-color: black;
   position: fixed;
-  top: 10px;
+  top: 20px;
   right: 25px;
   z-index: -1;
 }
@@ -149,13 +162,13 @@ header {
 }
 .topnav.responsive {
   position: fixed;
-  top: 30px;
+  top: 60px;
 }
 
 .topnav.responsive .icon {
   position: fixed;
   right: 25px;
-  top: 10px;
+  top: 20px;
 }
 .topnav.responsive a {
   float: none;
@@ -300,6 +313,20 @@ header {
   -ms-transform: scale(1.5); 
   -webkit-transform: scale(1.5); 
   transform: scale(1.5); 
+}
+
+#sharkAttack {
+  padding: 100px 20px 20px 20px;
+}
+
+#sharkAttack p {
+  font-size: 19;
+  text-align: left;
+}
+
+#sharkAttack h1 {
+  font-size: 2;
+  text-align: left;
 }
 
 h1 {
